@@ -9,3 +9,5 @@ git clone https://github.com/bddjr/simple-short-link-go
 cd simple-short-link-go
 ./run.sh
 ```
+
+短链名称不得包含 `/` `\` `.`，开头 `@` 用于后端内部重定向
