@@ -1,0 +1,8 @@
+{
+    "addr": ":2410",
+    "ssl": {
+        "enable": false,
+        "cert": "",
+        "key": ""
+    }
+}
