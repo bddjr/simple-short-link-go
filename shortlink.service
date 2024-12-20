@@ -1,0 +1,11 @@
+[Unit]
+Description=simple short link go
+After=network.target
+
+[Service]
+ExecStart=/opt/simple-short-link-go
+Restart=always
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

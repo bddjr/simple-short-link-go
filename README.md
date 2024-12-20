@@ -11,3 +11,13 @@ cd simple-short-link-go
 ```
 
 短链名称不得包含 `/` `\` `.`，开头 `@` 用于后端内部重定向
+
+安装服务：
+
+```
+su
+cd /opt
+git clone https://github.com/bddjr/simple-short-link-go
+cp simple-short-link-go/shortlink.service /etc/systemd/system/
+chmod 744 /etc/systemd/system/shortlink.service
+```
