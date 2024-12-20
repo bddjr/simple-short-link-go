@@ -4,9 +4,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-
-	"golang.org/x/net/http2"
-	"golang.org/x/net/http2/h2c"
 )
 
 func main() {
@@ -22,8 +19,6 @@ func main() {
 		Handler: http.HandlerFunc(handler),
 	}
 	fmt.Print("http://", srv.Addr, "/\n")
-
-	srv.Handler = h2c.NewHandler(srv.Handler, &http2.Server{})
 
 	err := srv.ListenAndServe()
 	if err != nil {
