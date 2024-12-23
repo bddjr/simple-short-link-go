@@ -3,6 +3,7 @@ Description=simple short link go
 After=network.target
 
 [Service]
+WorkingDirectory=/opt/simple-short-link-go
 ExecStart=/opt/simple-short-link-go/simple-short-link-go
 Restart=always
 KillMode=process
