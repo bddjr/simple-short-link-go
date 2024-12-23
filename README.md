@@ -18,6 +18,10 @@ cd simple-short-link-go
 su
 cd /opt
 git clone https://github.com/bddjr/simple-short-link-go
-cp simple-short-link-go/shortlink.service /etc/systemd/system/
+cd simple-short-link-go
+go build -trimpath -ldflags "-w -s"
+cp shortlink.service /etc/systemd/system/
 chmod 744 /etc/systemd/system/shortlink.service
+systemctl enable shortlink
+systemctl start shortlink
 ```
